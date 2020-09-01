@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +11,97 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #ddd;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+:root{
+  --d-violet : #337;
+  --l-violet : #88c;
+}
+
+.App{
+  background: var(--l-violet);
+  min-height: 100vh;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.Navbar{
+  padding: 1em;
+  width: 100%;
+  background: var(--d-violet);
+  max-width: 768px;
+}
+
+.BookList{
+  padding: 1.5em;
+  background: var(--l-violet);
+  width: 100%;
+  max-width: 768px;
+  padding-bottom: 12em;
+}
+
+.BookList li{
+  list-style: none;
+}
+.BookList li:hover{
+  text-decoration: line-through;
+  opacity: .7;
+}
+
+.no-books{
+  color: var(--d-violet);
+}
+
+.Book{
+  padding: 1em;
+  text-align: left;
+  background: var(--d-violet);
+  border-radius: .5em;
+  margin: 1em 0;
+}
+
+.BookForm{
+  padding: 1em;
+  text-align: left;
+  background: var(--d-violet);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 768px;
+  position: fixed;
+  bottom: 0;
+}
+
+.BookForm input{
+  border: none;
+  border-radius: .5em;
+  padding: 1em 1.5em;
+  margin: .5em ;
+  background: #225;
+  color: aliceblue;
+}
+
+.BookForm input :active, .BookForm input :focus{
+  outline: none;
+}
+
+#submitButton{
+  color: #558;
+  font-weight: bold;
+  background: #ddd;
+}
+
+#submitButton:hover{
+  background: #eef;
+  color: #000;
 }
